@@ -1,18 +1,18 @@
-import React from 'react'
+import React from "react";
 
-export default function Price({ book }) {
+export default function Price({ originalPrice, salePrice }) {
   return (
     <div className="book__price">
-      {book.salePrice ? (
+      {salePrice ? (
         <>
           <span className="book__price--normal">
-            ${book.originalPrice.toFixed(2)}
+            ${originalPrice.toFixed(2)}
           </span>
-          ${book.salePrice.toFixed(2)}
+          ${salePrice.toFixed(2)}
         </>
       ) : (
-        <> ${book.originalPrice.toFixed(2)} </>
+        <>${originalPrice.toFixed(2)}</>
       )}
     </div>
-  )
+  );
 }

@@ -5,7 +5,7 @@ import Rating from "../components/ui/Rating";
 import Price from "../components/ui/Price";
 import Book from "../components/ui/Book";
 
-const Booksinfo = ({ books }) => {
+const BooksInfo = ({ books }) => {
   const { id } = useParams();
   const book = books.find((book) => +book.id === +id);
 
@@ -77,4 +77,4 @@ const Booksinfo = ({ books }) => {
   );
 };
 
-export default Booksinfo;
+export default BooksInfo;

@@ -6,7 +6,7 @@ import Rating from "./Rating";
 
 const Book = ({ book }) => {
   return (
-    <div className="">
+    <div className="book">
       <Link to="/books">
         <figure className="book__img--wrapper">
           <img src={book.url} alt="" className="book__img" />

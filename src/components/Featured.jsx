@@ -2,6 +2,7 @@ import React from "react";
 import Book from "./ui/Book";
 import { books } from "../data.js";
 
+
 const Featured = () => {
   console.log(books);
 
