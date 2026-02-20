@@ -4,7 +4,7 @@ import Books from "./pages/Books";
 import { books } from "./data";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
-import BooksInfo from "./pages/BooksInfo2";
+import BooksInfo from "./pages/BooksInfo";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Cart from "./pages/Cart";
 
