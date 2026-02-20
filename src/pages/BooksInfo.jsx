@@ -8,7 +8,6 @@ import Book from "../components/ui/Book";
 const BooksInfo = ({ books, addToCart, cart }) => {
   const { id } = useParams();
   const book = books.find((book) => +book.id === +id);
-  const [added] = useState(false);
 
   function addBookToCart(book) {
     addToCart(book);
@@ -33,7 +32,11 @@ const BooksInfo = ({ books, addToCart, cart }) => {
             </div>
             <div className="book__selected">
               <figure className="book__selected--figure">
-                <img src={book.url} className="book__selected--img" />
+                <img
+                  src={book.url}
+                  alt={book.title}
+                  className="book__selected--img"
+                />
               </figure>
               <div className="book__selected--description">
                 <h2 className="book__selected--title">{book.title}</h2>
