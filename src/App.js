@@ -4,7 +4,7 @@ import Books from "./pages/Books";
 import { books } from "./data";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
-import BooksInfo from "./pages/BooksInfo";
+import BooksInfo from "./pages/BooksInfo2";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Cart from "./pages/Cart";
 
@@ -28,13 +28,13 @@ function App() {
     );
   }
 
-  function removeItem(item) { 
-    setCart(cart.filter(book => book.id !== item.id)); 
+  function removeItem(item) {
+    setCart(cart.filter((book) => book.id !== item.id));
   }
 
   function numberOfItems() {
     let counter = 0;
-    cart.forEach(item => {
+    cart.forEach((item) => {
       counter += item.quantity;
     });
     return counter;
@@ -60,7 +60,12 @@ function App() {
           <Route
             path="/cart"
             element={
-              <Cart books={books} cart={cart} changeQuantity={changeQuantity} removeItem={removeItem} />
+              <Cart
+                books={books}
+                cart={cart}
+                changeQuantity={changeQuantity}
+                removeItem={removeItem}
+              />
             }
           />
         </Routes>
